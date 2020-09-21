@@ -36,9 +36,10 @@ generateBtn.addEventListener("click", writePassword);
 
 //function to generate random password
 function generatePassword() {
-     // assigned null value to  password and charSet
+     // assigning empty string to  password and charSet variables
      var password = "";
      var charSet = "";
+     // declare passLength variable
      var passLength;
 
      //asking user to enter password length
@@ -60,7 +61,7 @@ function generatePassword() {
           }
      }
 
-     // asking user for character type
+     // asking user to enter character type
      var charType = prompt(
           "Do you want add lowercase letters in password,then please enter lowercase"
      );
@@ -70,16 +71,17 @@ function generatePassword() {
           //Calling FindUserInputType method
           charSet = FindUserInputType(charType, charSet);
 
-     // asking user for character type
+     // asking user to enter character type
      charType = prompt(
           "Do you want add uppercase letters in password,then please enter uppercase"
      );
 
+     //validating whether user selected uppercase or not
      if (charType != null)
           //Calling FindUserInputType method
           charSet = FindUserInputType(charType, charSet);
 
-     // asking user for character type
+     // asking user to enter character type
      charType = prompt(
           "Do you want add numeric values in password,then please enter numeric"
      );
@@ -89,7 +91,7 @@ function generatePassword() {
           //Calling FindUserInputType method
           charSet = FindUserInputType(charType, charSet);
 
-     // asking user for character type
+     // asking user to enter character type
      charType = prompt(
           "Do you want add special chars in password,then please enter special"
      );
@@ -112,32 +114,56 @@ function generatePassword() {
                charSet = FindUserInputType(charType, charSet);
      }
 
-     for (var i = 0; i < passLength; i++) {
-          password =
-               password +
-               charSet.charAt(Math.floor(Math.random() * (charSet.length - 1)));
-     }
+     //validating the charSet before generate the password
+     if (charSet != "") {
+          for (var i = 0; i < passLength; i++) {
+               password =
+                    password +
+                    charSet.charAt(
+                         Math.floor(Math.random() * (charSet.length - 1))
+                    );
+          }
+     } else
+          alert(
+               " Sorry, we can't generate password, as you didn't select any character type to generate password,please try again"
+          );
 
      console.log(password);
      return password;
 }
 
 //function to find user input type
-
 function FindUserInputType(charType, charSet) {
+     //initialize lowerCase Chars
      var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+
+     //initialize upperCase Chars
      var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+     //initialize numeric values
      var numberSet = "0123456789";
+
+     //initialize special characters
      var specialChars = " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
+     //validating whether user selected lowercase chars
      if (charType.toLowerCase() === "lowercase")
+          //Adding lowercase characters to charSet
           charSet = charSet + lowerCaseChars;
+     //validating whether user selected uppercase chars
      else if (charType.toLowerCase() === "uppercase")
+          //Adding uppercase characters to charSet
           charSet = charSet + upperCaseChars;
+     //validating whether user selected numeric values
      else if (charType.toLowerCase() === "numeric")
+          //Adding numeric values to charSet
           charSet = charSet + numberSet;
+     //validating whether user selected special characters
      else if (charType.toLowerCase() === "special")
+          //Adding special characters to charSet
           charSet = charSet + specialChars;
+
      console.log(charSet);
+     //return charSet
      return charSet;
 }
