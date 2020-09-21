@@ -53,7 +53,7 @@ git clone git@github.com:NirmalaAbothu/password-generator-9.22.20.git
 
 ## Credits
 
-## Followed the documentation of https://www.w3schools.com/js/
+Followed the documentation of https://www.w3schools.com/js/
 
 ## License & copyright
 
