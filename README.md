@@ -34,7 +34,7 @@ If no character type selected,will prompt to try again.
 -    For each iteration random character will be generated and added to the password variable
 -    Finally return the password.
 
-Built With
+## Built With
 
 -    Javascript
 
