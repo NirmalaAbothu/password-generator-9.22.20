@@ -63,7 +63,7 @@ function generatePassword() {
 
      // asking user to enter character type
      var charType = prompt(
-          "Do you want add lowercase letters in password,then please enter lowercase"
+          "Do you want add lowercase characters in password,then please enter word as LOWERCASE"
      );
 
      //validating whether user selected lowercase or not
@@ -73,7 +73,7 @@ function generatePassword() {
 
      // asking user to enter character type
      charType = prompt(
-          "Do you want add uppercase letters in password,then please enter uppercase"
+          "Do you want add uppercase characters in password,then please enter word as UPPERCASE"
      );
 
      //validating whether user selected uppercase or not
@@ -83,7 +83,7 @@ function generatePassword() {
 
      // asking user to enter character type
      charType = prompt(
-          "Do you want add numeric values in password,then please enter numeric"
+          "Do you want add numeric values in password,then please enter word as  NUMERIC"
      );
 
      //validating whether user selected numeric or not
@@ -93,7 +93,7 @@ function generatePassword() {
 
      // asking user to enter character type
      charType = prompt(
-          "Do you want add special chars in password,then please enter special"
+          "Do you want add special characters in password,then please enter word as  SPECIAL"
      );
      //validating whether user selected special or not
      if (charType != null)
@@ -103,9 +103,9 @@ function generatePassword() {
      //validating  whether user selected
      //at least one character type or not
      if (charSet == "") {
-          //prompting user to select at least one charType
+          //prompt user to select at least one charType
           charType = prompt(
-               "Select at least one charType,lowecase or uppercase or special or numeric"
+               "Select at least one charType,LOWERCASE or UPPERCASE or SPECIAL or NUMERIC"
           );
 
           //validating whether user selected charType or not

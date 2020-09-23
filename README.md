@@ -6,9 +6,9 @@
 
 ---
 
-![alt text](Images/image1.PNG)
+![alt text](Assets/Images/image1.PNG)
 
-![alt text](Images/image2.PNG)
+![alt text](Assets/Images/image2.PNG)
 
 Implemented the code to generate the password based on user inputs(character type) as below:
 
